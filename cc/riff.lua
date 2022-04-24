@@ -95,6 +95,7 @@ local function encode_riff_or_list(ckID,fourcc,chunks)
         buffer = buffer..chunks[i]
         if (#buffer%2)==1 then buffer=buffer..string.char(0) end
     end
+    return buffer
 end
 
 local function encode_riff_file(f,form_type,chunks)
